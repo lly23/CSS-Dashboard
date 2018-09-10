@@ -1,0 +1,198 @@
+html, body {
+    font-family: 'PT Sans', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+/* supports checks whether the user browswer supports this */
+@supports (grid-area:auto) {
+    .site {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        /* blue-heading navbar dashboard announcements */
+        grid-template-rows: 40px 110px 110px 60px 800px 180px 60px 40px;
+        grid-column: 1/10;
+    }
+
+    .header {
+        grid-column: 1/10;
+        background: rgb(33, 132, 232);
+    }
+
+    /* flexbox for heading items at the very top */
+    .heading-items {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        padding: 0.6em;
+        margin-right: 5%;
+    }
+
+    .flex-head {
+        display: flex;
+        flex-basis: auto;
+        padding-left: 0.5em;
+        padding-right: 0.5em; 
+    }
+
+    .flex-head:hover {
+        transform: scale(1.1);
+    }
+
+    .flex-head:first-child {
+        border-right: 1px solid rgb(28, 133, 216);
+    }
+
+    .flex-head:nth-child(2) {
+        border-right: 1px solid rgb(28, 133, 216);
+    }
+
+    .nav-bar {
+        position: relative;
+        padding-top: 0.5em;
+        grid-column: 1/10;
+        background: rgb(19, 70, 112);
+    }
+
+    /* adds blue background with diagonal pattern and fade */
+    .nav-layer {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(../img/Menu_Background.png) center;
+        background-repeat:  no-repeat;
+    }
+
+    .shadows-layer {
+        background: url(../img/Shadows.png) center;
+        background-repeat: no-repeat;
+    }
+
+    .dash {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        grid-column: 2/9;
+        background: rgb(51, 204, 102);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-radius: 0.2em;
+        color: white;
+    }
+
+    /* flexbox for dashboard heading and search bar */
+    .flex-dash {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-dash p {
+        font-size: 2em;
+    }
+
+    .flex-dash:first-child {
+        padding-left: 1em;
+    }
+
+    .flex-dash:last-child {
+        padding-right: 1em;
+    }
+
+    /* dashboard search bar  */
+    .search-bar {
+        display: flex;
+        align-items: center;
+        width: 16.125em;
+        height: 2em;
+        background: rgb(244, 244, 244);
+        border: 1px solid rgb(45, 181, 91);
+        border-radius: 0.2em;
+    }
+
+    .search-bar img {
+        float: right;
+        padding-right: 0.4em;
+    }
+
+    input {
+        width: 90%;
+        background: rgb(244, 244, 244);
+        border: none;
+    }
+
+    /* announcements section */
+    .top {
+        display: flex;
+        flex-direction: row;
+        grid-column: 2/9;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(233, 233, 233);
+        /* box-shadow: 0 4px 2px -2px gray; */
+    }
+
+    /* flexbox for announcements section  */
+    .flex-top {
+       display: flex;
+       align-items: center;
+       padding: 1em 2.5em 1em 1em;
+    }
+
+    .flex-top:first-child {
+        color: rgb(254, 127, 19);
+    }
+
+    .flex-top:nth-child(2) {
+        border-left: 1px solid rgb(233, 233, 233);
+        border-right: 1px solid rgb(233, 233, 233);
+    }
+
+    /* side bar holds tasks and recommendations */
+    .side-bar {
+        display: flex;
+        flex-direction: column;
+        grid-column: 2/4;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(233, 233, 233);
+    }
+
+    /* flexbox for tasks and recommendations */
+    .flex-side {
+        display: flex;
+        flex-basis: auto;  
+        color: rgb(36, 152, 244);
+        font-size: 2em;
+        padding: 1em 2.5em 1em 1em;;
+        text-align: left;
+        border: 1px solid rgb(233, 233, 233);  
+    } 
+
+    /* main holds analytics, contacts, and did you know column */
+    .main {
+        grid-column: 4/9;
+        background: #eeffee;
+        border: 1px solid rgb(233, 233, 233);
+    }
+
+    .banner {
+        grid-column: 2/9;
+        background: #773377;
+    }
+
+    /* gives space between banner and footer */
+    .empty-row {
+        grid-column: 1/10;
+    }
+
+    .footer {
+        grid-column: 1/10;
+        background: #ffffdd;
+    }
+
+    /* icon properties */
+
+}
