@@ -3,7 +3,6 @@ CSS Dashboard Project for MEJO 487
 Assignment Specs:
 
 Requirements:
-
 All text must be real text. No images.
 The app must be responsive. You may use CSS Grid, FlexBox, and/or Bootstrap. I will view the app on mobile and desktop.
 Navigation roll-overs must work (e.g., the icons change color)
