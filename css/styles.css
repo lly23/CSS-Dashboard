@@ -68,11 +68,6 @@ html, body {
         background-repeat:  no-repeat;
     }
 
-    .shadows-layer {
-        background: url(../img/Shadows.png) center;
-        background-repeat: no-repeat;
-    }
-
     .dash {
         display: flex;
         flex-direction: row;
@@ -151,6 +146,20 @@ html, body {
         border-right: 1px solid rgb(233, 233, 233);
     }
 
+    /* font and size for tasks and recommendations sections */
+    .gray {
+        filter: grayscale(100);
+        color: rgb(204, 204, 204);
+    }
+
+    .blue {
+        color: rgb(36, 152, 244);
+    }
+
+    .blue-heading {
+        font-size: 2em;
+    }
+
     /* side bar holds tasks and recommendations */
     .side-bar {
         display: flex;
@@ -163,19 +172,64 @@ html, body {
     /* flexbox for tasks and recommendations */
     .flex-side {
         display: flex;
-        flex-basis: auto;  
-        color: rgb(36, 152, 244);
-        font-size: 2em;
-        padding: 1em 2.5em 1em 1em;;
+        flex-direction: column; 
         text-align: left;
         border: 1px solid rgb(233, 233, 233);  
     } 
 
+    /* flexbox within task section to keep tasks in rows */
+    .flex-task {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.2em;
+        padding: 1em 0em 1em 1em;
+        border-bottom: 1px solid rgb(233, 233, 233);
+    }
+      
+    .flex-task div {
+        /* justify-content: space-between; */
+        /* padding: 1em 1em 1em 1em; */
+    }
+
+    /* flexbox within recommendations section to keep recommendations in rows */
+    .flex-recommendation {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.2em;
+        padding: 1em 0em 1em 1em;
+        border-bottom: 1px solid rgb(233, 233, 233);
+    }
+
+    .flex-recommendation span {
+        color: rgb(153, 153, 153);
+    }     
+    
+    .small-title {
+        font-size: 0.7em;
+    }
+
     /* main holds analytics, contacts, and did you know column */
     .main {
+        display: flex;
+        flex-direction: column;
         grid-column: 4/9;
-        background: #eeffee;
+        background: rgb(255, 255, 255);
         border: 1px solid rgb(233, 233, 233);
+    }
+
+    /* flexbox for sections within main */
+    .flex-main {
+
+    }
+
+    /* Side bar first div (Tasks and Recommendations heading) properties */
+    .flex-task:first-child, .flex-recommendation:first-child, .flex-recommendation:last-child {
+        border-bottom: none;
+        padding-bottom: 0em;
     }
 
     .banner {
