@@ -37,7 +37,10 @@
                 <div class="promotions"></div>
                 <div class="page-creator"></div>
                 <div class="analytics"></div>
-            </div>   
+            </div> 
+            <div class="marker">
+                <img src="img/Marker.png" alt="white marker">  
+            </div>
         </div>
     </div>
 
@@ -49,6 +52,9 @@
 
     <!-- Main Content -->
     <!-- Announcements Section -->
+    <div class="background-shade">
+        <img src="img/Background_Shade.png" alt="grey shaded background">
+    </div>
     <div class="top">
         <div><p>ANNOUNCEMENTS</p></div>
         <div><p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus</p></div>
@@ -59,7 +65,7 @@
     <div class="side-bar">
         <!-- Tasks -->
         <div class="flex-task">
-            <div>
+            <div class="task-heading">
                 <span class="blue blue-heading">Tasks</span>
                 <img src="img/Gray_Icon_ Settings.png" alt="Gray settings icon">
             </div>
@@ -122,55 +128,110 @@
 
     <!-- Right Section Content -->
     <div class="main">
-        <!-- Analytics Section -->
         <div class="blue blue-heading">Analytics</div>
-        <div class="flex-main">
-            <div class="flex-analytics">
-                <div>
-                    <span class="small-title">ACTIVITY</span>
-                    <span><select></select></span>
-                    <img src="img/Activity.png" alt="Activity Graph">
-                    <div>
-                        <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
-                        <img src="img/Facebook.png" alt="Facebook">
-                        <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
-                        <img src="img/Twitter.png" alt="Twitter">
-                        <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
-                        <img src="img/Foursquare.png" alt="Foursquare">
-                        <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
-                        <img src="img/Google.png" alt="Google Plus">
-                    </div>
+        <!-- Analytics Section -->    
+        <div class="flex-charts">
+            <!-- Analytics Chart and Activity -->
+            <div class="analytics-box">
+                <div class="activity"> 
+                    <span>ACTIVITY</span>
+                    <select class="dropdown">
+                        <option value="placeholder date">06/28/11 - 07/21/11</option>
+                        <option value="first date">07/21/11 - 08/14/11</option>
+                        <option value="second date">08/14/11 - 09/07/11</option>
+                        <option value="third date">09/07/11 - end of time</option>
+                    </select>
                 </div>
-                <div>
-                    <img src="img/Channels.png" alt="Channels Pie Graph">
-                    <img src="img/Referrals.png" alt="Referrals Pie Graph">
-                </div>
+                <img src="img/Activity.png" alt="Activity Graph">
+            </div>
+            <!-- Channels and Referrals Section -->
+            <div class="charts">
+                <span>Channels</span>
+                <img src="img/Channels.png" alt="Channels Pie Graph">
+                <span>Referrals</span>
+                <img src="img/Referrals.png" alt="Referrals Pie Graph">
             </div>
         </div>
+            <div class="checkbox">
+                <span>
+                    <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
+                    <img src="img/Facebook.png" alt="Facebook">
+                </span>
+                <span>
+                    <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
+                    <img src="img/Twitter.png" alt="Twitter">
+                </span>
+                <span>
+                    <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
+                    <img src="img/Foursquare.png" alt="Foursquare">
+                </span>
+                <span>
+                    <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
+                    <img src="img/Google.png" alt="Google Plus">
+                </span> 
+            </div>
+ 
         <!-- Contacts and Influencers -->
         <div class="flex-main">
-            <div>
-                <span>75 CONTACTS</span>
-                <span>4 INFLUENCERS</span>
+            <div class="people-box">
+                <img src="img/Contacts_Avatar.png" alt="Green Avatar">
+                <div class="ribbon">
+                    <span>75 CONTACTS</span>
+                    <span>4 INFLUENCERS</span>
+                </div>
+                <img src="img/Contacts_Chart.png" alt="chart for contacts">
             </div>
-            <div>
-                <span>17 CUSTOMERS</span>
-                <span>0 INFLUENCERS</span>
+            <div class="people-box">
+                <img src="img/Customers_Avatar.png" alt="Orange Avatar">
+                <div class="ribbon">
+                    <span>17 CUSTOMERS</span>
+                    <span>0 INFLUENCERS</span>
+                </div>
+                <img src="img/Customers_Chart.png" alt="chart for customers">
             </div>
         </div>
         <!-- Did you know Section -->
-        <div class="flex-main">
-            DID YOU KNOW?
+        <div class="did-you-know">
+            <div class="dyk-layer">
+                <span>DID YOU KNOW?</span>
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.       
+                </p>
+            </div>
         </div>
     </div>
 
     <!-- Banner -->
-    <div class="banner">BANNER</div>
+    <div class="banner">
+        <div class="banner-box">
+            <img src="img/green_message_image.png" alt="bulk of green messages">
+            <span>Watch what you say.</span>
+            <span>Message Management</span>
+        </div>
+        <div class="banner-box">
+            <img src="img/people_image.png" alt="group of people">
+            <span>See what others are doing with us.</span>
+        </div>
+        <div class="banner-box">
+            <img src="img/version2_image.png" alt="yellow graphic">
+        </div>
+    </div>
 
     <div class="empty-row"></div>
 
     <!-- Footer -->
-    <div class="footer">FOOTER</div>
+    <div class="footer">
+        <div>Tutorials</div>
+        <div>Support</div>
+        <div>Blog</div>
+        <div><span>Ariel likes your Win a Cooper Sweepstakes Promotion</span></div>
+        <img src="img/blue_up_arrow.png" alt="blue up arrow">
+        <div><img src="img/Avatar.png" alt="profile avatar"></div>
+        <div><span>Logout</span></div>
+        <div><img src="img/Avatar_ Facebook.png" alt="Facebook Icon"></div>
+        <div><img src="img/Avatar_ Twitter.png" alt="Twitter Icon"></div>
+        <div><img src="img/Avatar_ Foursquare.png" alt="Foursquare Icon"></div>
+        <div><img src="img/Avatar_ YouTube.png" alt="Youtube Icon"></div>
+    </div>
 </body>
 </html>
 

@@ -8,14 +8,23 @@ html, body {
 @supports (grid-area:auto) {
     .site {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(10, 1fr);
         /* blue-heading navbar dashboard announcements */
         grid-template-rows: 40px 110px 110px 60px 800px 180px 60px 40px;
-        grid-column: 1/10;
+        grid-template-areas: 
+        'hd hd hd hd hd hd hd hd hd hd'
+        'nv nv nv nv nv nv nv nv nv nv'
+        'dash dash dash dash dash'
+        'top top top top top'
+        'side side side side main main main main main main'
+        'banner banner banner banner banner banner'
+        'empty empty empty empty empty empty empty empty empty empty'
+        'footer footer footer footer footer footer footer footer footer footer'
     }
 
+    /* very top header */
     .header {
-        grid-column: 1/10;
+        grid-column: 1/11;
         background: rgb(33, 132, 232);
     }
 
@@ -52,7 +61,7 @@ html, body {
     .nav-bar {
         position: relative;
         padding-top: 0.5em;
-        grid-column: 1/10;
+        grid-column: 1/11;
         background: rgb(19, 70, 112);
     }
 
@@ -62,6 +71,20 @@ html, body {
         align-items: baseline;
     }
 
+    .marker {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+    }
+
+    .marker img {
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+    }
+
     /* adds blue background with diagonal pattern and fade */
     .nav-layer {
         position: absolute;
@@ -69,8 +92,7 @@ html, body {
         right: 0;
         bottom: 0;
         left: 0;
-        background: url(../img/Menu_Background.png) center;
-        background-repeat:  no-repeat;
+        background: url(../img/Menu_Background.png) center no-repeat;
     }
 
     /* dashboard section */
@@ -80,7 +102,7 @@ html, body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        grid-column: 2/9;
+        grid-column: 2/10;
         background: rgb(51, 204, 102);
         margin-top: 1em;
         margin-bottom: 1em;
@@ -119,21 +141,43 @@ html, body {
         border: none;
     }
 
+    input:focus {
+        outline: none;
+    }
+
     /* announcements section */
+    .background-shade {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 16.2em;
+    }
+
+    .background-shade img {
+        width: 75em;
+        max-width: none;
+    }
+
     .top {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        grid-column: 2/9;
+        grid-column: 2/10;
+        margin-top: 0.8em;
         background: rgb(255, 255, 255);
-        /* box-shadow: 0 4px 2px -2px gray; */
+        z-index: 10;
     }
 
     /* flexbox for announcements section  */
     .top div {
+       display: flex;
+       flex-basis: auto;
        flex-grow: 1;
+       align-items: center;
        border: 1px solid rgb(233, 233, 233);
-       padding: 1em 2.5em 1em 1em;
+       padding: 1.5em 2.5em 1em 1em;
     }
 
     .top div:first-child {
@@ -148,6 +192,7 @@ html, body {
     .blue-heading {
         float: left;
         font-size: 2em;
+        padding: 0.5em 0.5em 0.2em 0.5em;
     }
 
     /* side bar holds tasks and recommendations */
@@ -156,9 +201,10 @@ html, body {
         display: flex;
         flex-direction: column;
         text-align: left;
-        grid-column: 2/4;
+        grid-column: 2/5;
         background: rgb(255, 255, 255);
         border: 1px solid rgb(233, 233, 233);  
+        z-index: 9;
     }
 
     /* flexbox within task section to keep tasks in rows */
@@ -168,14 +214,31 @@ html, body {
         font-size: 1.2em;
     }
 
+    .task-heading img {
+        margin-left: auto;
+        float: right;
+        align-items: center;
+        padding: 1.7em 1em 1em 1em;
+    }
+
     .tasks {
         display: flex;
         flex-direction: row;
+        padding: 0.5em;
         border-bottom: 1px solid rgb(233, 233, 233);
     }
 
-    /* color to grayscale when hovering over tasks */
-    .tasks:hover {
+    .tasks div:nth-child(2) {
+        padding: 0em 1.5em 0em 0.6em;
+    }
+
+    .tasks div:last-child {
+        margin-left: auto;
+        float: right;
+    }
+
+    /* color to grayscale when hovering over tasks and recommendations */
+    .tasks:hover, .recommendations:hover {
         filter: grayscale(100);
         color: rgb(204, 204, 204);
     }
@@ -191,11 +254,18 @@ html, body {
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid rgb(233, 233, 233);
+        padding: 1em;
+        color: rgb(119, 119, 119);
+    }
+
+    .recommendations img {
+        margin-right: 1em;
     }
 
     .recommendations div {
         display: flex;
         flex-direction: column;
+        justify-content: left;
     }
 
     .small-title {
@@ -203,47 +273,138 @@ html, body {
     }
 
     /* main holds analytics, contacts, and did you know column */
+    /* flexbox for sections within main */
     .main {
         display: flex;
         flex-direction: column;
-        grid-column: 4/9;
+        grid-column: 5/10;
         background: rgb(255, 255, 255);
         border: 1px solid rgb(233, 233, 233);
+        z-index: 8;
     }
 
-    /* flexbox for sections within main */
-    .flex-main {
+    .main .blue-heading {
+        padding: 0.7em 0em 0em 1.5em;
+    }
+
+    /* flexbox box for whole analytics section to keep divs structured in columns */
+    /* analytics to keep chart and graph side by side */
+    .analytics-box {
+        width: 75%;
+        padding-right: 1em;
+        margin-right: 1em;
+        border-right: 1px solid rgb(233, 233, 233);
+        box-shadow: 3px 0px 0px 0px rgba(238,238,238,1);
+    }
+
+    /* social media checklist */
+    .checkbox {
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        padding: 2em;
     }
 
-    .flex-analytics {
-        display: flex; 
-        flex-direction: column;
+    .checkbox span {
+        padding-left: 1em;
+    }
+    
+    /* activity section to keep activity heading and dropdown box in one row */
+    .activity {
+        padding: 1em 1em 2em 2em;
+        float: right;
     }
 
-    .flex-activity span {
+    .activity span {
         color: rgb(153, 153, 153);
     }
 
     /* activity graph dropdown properties */
     select {
-        width: 25%;
+        -webkit-appearance:none;
+        outline: none;
+    }
+    
+    .dropdown {
+        color: rgb(102, 102, 102);
+        width: 14em;
+        height: 2.5em;
+        margin-left: auto;
+        float: right;
+        border: 1px solid rgb(233, 233, 233);
+        appearance: none;
+        background: url(../img/dropdown_arrow.png) no-repeat right;
+    }
+
+    /*  charts section within analytics box */
+    .charts {
+        flex-basis: auto;
+    }
+
+    /* flexbox directions for the analytics flex divs */
+    .analytics-box, .charts {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .activity, .flex-charts {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid rgb(233, 233, 233);
+    }
+
+    .people-box {
+        height: 55%;
+        box-shadow: 0px 0px 5px 4px rgba(217,217,217,1);
+        border-radius: 0.2em;
+    }
+
+    .ribbon {
+        display: flex;
+        flex-direction: column;
+        background: url(../img/blue_ribbon.png) no-repeat;
+    }
+
+    /* did you know section */
+    .did-you-know {
+        display: flex;
+        flex-direction: column;
+        background: rgb(36, 152, 244);
+    }
+
+    .dyk-layer {
+        background: url(../img/DYK_Navigation.png) no-repeat;
     }
 
     .banner {
-        grid-column: 2/9;
-        background: #773377;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        grid-column: 2/10;
+        background: rgb(36, 152, 244);
+    }
+
+    .banner-box {
+        height: auto;
+        background: rgb(255, 255, 255);
+        border-radius: 0.3em;
     }
 
     /* gives space between banner and footer */
     .empty-row {
-        grid-column: 1/10;
+        grid-column: 1/11;
     }
 
     .footer {
-        grid-column: 1/10;
-        background: #ffffdd;
+        display: flex;
+        flex-direction: row;
+        grid-column: 1/11;
+        background: rgb(247, 247, 247);
     }
 
 }
