@@ -39,7 +39,7 @@
                 <div class="analytics"></div>
             </div> 
             <div class="marker">
-                <img src="img/Marker.png" alt="white marker">  
+                <img class="marker" src="img/Marker.png" alt="white marker">
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
     <!-- Dashboard -->
     <div class="dash">
         <div><p>Dashboard</p></div>
-        <div class="search-bar"><input><img src="img/Icon_ Search.png" alt="magnifying glass"></div>
+        <div class="search-bar"><input class="search"><img src="img/Icon_ Search.png" alt="magnifying glass"></div>
     </div>
 
     <!-- Main Content -->
@@ -58,8 +58,10 @@
     <div class="top">
         <div><p>ANNOUNCEMENTS</p></div>
         <div><p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus</p></div>
-        <div><img src="img/Left_Button_ Navigation_ Small.png" alt="left arrow button"><img src="img/Right_Button_ Navigation_ Small.png" alt="right arrow button"></div>
+        <div><img class="button-nav" src="img/Left_Button_ Navigation_ Small.png" alt="left arrow button"><img class="button-nav" src="img/Right_Button_ Navigation_ Small.png" alt="right arrow button"></div>
     </div>
+
+
 
     <!-- Tasks and Recommendations -->
     <div class="side-bar">
@@ -96,28 +98,36 @@
                 <span class="blue blue-heading">Recommendations</span>
             </div> 
             <div class="recommendations">
-                <img src="img/Article Icon.png" alt="Article Icon">
+                <div>
+                    <img src="img/Article Icon.png" alt="Article Icon">
+                </div>
                 <div>
                     <span class="small-title">Article</span>
                     <span>7 Steps to getting more Fans</span>
                 </div>
             </div>
             <div class="recommendations">
-                <img src="img/Article Icon.png" alt="Article Icon">
+                <div>
+                    <img src="img/Article Icon.png" alt="Article Icon">
+                </div>
                 <div>
                     <span class="small-title">Article</span>
                     <span>Increase traction with more interactions</span>
                 </div>
             </div>
             <div class="recommendations">
-                <img src="img/Checklist Icon.png" alt="Checklist Icon">
+                <div>
+                    <img src="img/Checklist Icon.png" alt="Checklist Icon">
+                </div>
                 <div>
                     <span class="small-title">Checklist</span>
                     <span>Creating a Promotion</span>
                 </div>
             </div> 
             <div class="recommendations">
-                <img src="img/Lightbulb Icon.png" alt="Checklist Icon">
+                <div>
+                    <img src="img/Lightbulb Icon.png" alt="Checklist Icon">
+                </div>
                 <div>
                     <span class="small-title">Tip</span>
                     <span>Share More</span>
@@ -136,7 +146,7 @@
                 <div class="activity"> 
                     <span>ACTIVITY</span>
                     <select class="dropdown">
-                        <option value="placeholder date">06/28/11 - 07/21/11</option>
+                        <option value="placeholder date">06/28/11 - 07/21/11 <img src="img/dropdown_arrow.png" alt="dropdown arrow"></option>
                         <option value="first date">07/21/11 - 08/14/11</option>
                         <option value="second date">08/14/11 - 09/07/11</option>
                         <option value="third date">09/07/11 - end of time</option>
@@ -146,33 +156,33 @@
             </div>
             <!-- Channels and Referrals Section -->
             <div class="charts">
-                <div>
-                    <span>CHANNELS</span>
-                    <img src="img/Channels.png" alt="Channels Pie Graph">
-                </div>
-                <div>
-                    <span>REFERRALS</span>
-                    <img src="img/Referrals.png" alt="Referrals Pie Graph"> 
-                </div>
+                <span>CHANNELS</span>
+                <img src="img/Channels.png" alt="Channels Pie Graph">
+                <span>REFERRALS</span>
+                <img src="img/Referrals.png" alt="Referrals Pie Graph"> 
             </div>
         </div>
-            <div class="checkbox">
-                <span>
-                    <input type="checkbox" name="Facebook" value="Facebook" class="form_checkbox">
+            <div class="form-checkbox">
+                <div class="checkbox">
+                    <input type="checkbox" name="facebook" value="facebook" id="facebook"/>
+                    <label for="facebook"></label>
                     <img src="img/Facebook.png" alt="Facebook">
-                </span>
-                <span>
-                    <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="twitter" value="twitter" id="twitter"/>
+                    <label for="twitter"></label>
                     <img src="img/Twitter.png" alt="Twitter">
-                </span>
-                <span>
-                    <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="fourspace" value="fourspace" id="fourspace"/>
+                    <label for="fourspace"></label>
                     <img src="img/Foursquare.png" alt="Foursquare">
-                </span>
-                <span>
-                    <img class="form_checkbox" src="img/Form_ Checkbox.png" alt="checkbox">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="google" value="google" id="google"/>
+                    <label for="google"></label>
                     <img src="img/Google.png" alt="Google Plus">
-                </span> 
+                </div> 
             </div>
  
         <!-- Contacts and Influencers -->
@@ -181,25 +191,28 @@
                 <img class="avatar" src="img/Contacts_Avatar.png" alt="Green Avatar">
                 <div class="ribbon">
                     <span>75 CONTACTS</span>
-                    <span>4 INFLUENCERS</span>
+                    <span class="small-title">4 INFLUENCERS</span>
                 </div>
-                <img src="img/Contacts_Chart.png" alt="chart for contacts">
+                <img class="box-charts" src="img/Contacts_Chart.png" alt="chart for contacts">
             </div>
             <div class="people-box">
                 <img class="avatar" src="img/Customers_Avatar.png" alt="Orange Avatar">
                 <div class="ribbon">
                     <span>17 CUSTOMERS</span>
-                    <span>0 INFLUENCERS</span>
+                    <span class="small-title">0 INFLUENCERS</span>
                 </div>
-                <img src="img/Customers_Chart.png" alt="chart for customers">
+                <img class="box-charts" src="img/Customers_Chart.png" alt="chart for customers">
             </div>
         </div>
+
         <!-- Did you know Section -->
         <div class="did-you-know">
             <div class="dyk-layer">
-                <span>DID YOU KNOW?</span>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.       
-                </p>
+                <div>
+                    <span>DID YOU KNOW?</span>
+                    <br/>
+                    <span>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</span>
+                </div>  
             </div>
         </div>
     </div>
@@ -208,14 +221,20 @@
     <div class="banner">
         <div class="banner-box">
             <img src="img/green_message_image.png" alt="bulk of green messages">
-            <span>Watch what you say.</span>
-            <span>Message Management</span>
+            <div class="word-box">
+                <span id="green">Watch what you say.</span>
+                <span class="small-title">Message Management</span>
+            </div>
         </div>
         <div class="banner-box">
-            <img src="img/people_image.png" alt="group of people">
-            <span>See what others are doing with us.</span>
+            <img class="people" src="img/people_image.png" alt="group of people">
+            <span class="green-block">See what others are doing with us.</span>
         </div>
         <div class="banner-box">
+            <div class="word-box">
+                <span class="orange">Version 2.0</span>
+                <span class="orange">is coming</span>
+            </div>
             <img src="img/version2_image.png" alt="yellow graphic">
         </div>
     </div>
@@ -224,17 +243,25 @@
 
     <!-- Footer -->
     <div class="footer">
-        <div>Tutorials</div>
-        <div>Support</div>
-        <div>Blog</div>
-        <div><span>Ariel likes your Win a Cooper Sweepstakes Promotion</span></div>
-        <img src="img/blue_up_arrow.png" alt="blue up arrow">
-        <div><img src="img/Avatar.png" alt="profile avatar"></div>
-        <div><span>Logout</span></div>
-        <div><img src="img/Avatar_ Facebook.png" alt="Facebook Icon"></div>
-        <div><img src="img/Avatar_ Twitter.png" alt="Twitter Icon"></div>
-        <div><img src="img/Avatar_ Foursquare.png" alt="Foursquare Icon"></div>
-        <div><img src="img/Avatar_ YouTube.png" alt="Youtube Icon"></div>
+        <div class="footer-text">
+            <span class="underline">Tutorials</span>
+            <span class="underline">Support</span>
+            <span class="underline">Blog</span>
+        </div>
+        <div class="footer-notif">
+            <span><a class="blue bold underline">Ariel Winter</a> likes your <a class="blue bold underline">Win a Cooper Sweepstakes</a> Promotion</span>
+            <img src="img/blue_up_arrow.png" alt="blue up arrow">
+        </div>
+        <div class="profile">
+            <img src="img/Avatar.png" alt="profile avatar">
+            <span class="blue underline">Logout</span>
+        </div>
+        <div class="footer-media">
+            <img class="social-media" src="img/Avatar_ Facebook.png" alt="Facebook Icon">
+            <img class="social-media" src="img/Avatar_ Twitter.png" alt="Twitter Icon">
+            <img class="social-media" src="img/Avatar_ Foursquare.png" alt="Foursquare Icon">
+            <img class="social-media" src="img/Avatar_ YouTube.png" alt="Youtube Icon">
+        </div>
     </div>
 </body>
 </html>

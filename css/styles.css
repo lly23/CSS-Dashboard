@@ -8,23 +8,24 @@ html, body {
 @supports (grid-area:auto) {
     .site {
         display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        /* blue-heading navbar dashboard announcements */
-        grid-template-rows: 40px 110px 110px 60px 800px 180px 60px 40px;
+        grid-template-columns: repeat(11, 1fr);
+        /* blue-heading navbar dashboard announcements main banner empty footer */
+        grid-template-rows: 40px 110px 110px 70px 960px 200px 60px 60px;
         grid-template-areas: 
-        'hd hd hd hd hd hd hd hd hd hd'
-        'nv nv nv nv nv nv nv nv nv nv'
-        'dash dash dash dash dash'
-        'top top top top top'
-        'side side side side main main main main main main'
-        'banner banner banner banner banner banner'
-        'empty empty empty empty empty empty empty empty empty empty'
-        'footer footer footer footer footer footer footer footer footer footer'
+        'hd hd hd hd'
+        'nv nv nv nv'
+        'blank dash dash blank'
+        'blank section section blank'
+        'side main main main'
+        'blank banner banner blank'
+        'empty empty empty empty'
+        'footer footer footer footer'
     }
 
     /* very top header */
     .header {
-        grid-column: 1/11;
+        grid-column: 1/12;
+        /* grid-column: hd; */
         background: rgb(33, 132, 232);
     }
 
@@ -61,7 +62,8 @@ html, body {
     .nav-bar {
         position: relative;
         padding-top: 0.5em;
-        grid-column: 1/11;
+        grid-column: 1/12;
+        /* grid-column: nv; */
         background: rgb(19, 70, 112);
     }
 
@@ -69,20 +71,19 @@ html, body {
         display: flex;
         justify-content: center;
         align-items: baseline;
+        width: 38%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .marker {
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        bottom: 0;
+        width: 31%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .marker img {
-        padding: 0;
-        margin: 0;
-        bottom: 0;
+        width: 3em;
     }
 
     /* adds blue background with diagonal pattern and fade */
@@ -102,7 +103,8 @@ html, body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        grid-column: 2/10;
+        grid-column: 2/11;
+        /* grid-column: dash; */
         background: rgb(51, 204, 102);
         margin-top: 1em;
         margin-bottom: 1em;
@@ -135,13 +137,13 @@ html, body {
         padding-right: 0.4em;
     }
 
-    input {
+    .search {
         width: 90%;
         background: rgb(244, 244, 244);
         border: none;
     }
 
-    input:focus {
+    .search:focus {
         outline: none;
     }
 
@@ -155,7 +157,7 @@ html, body {
     }
 
     .background-shade img {
-        width: 75em;
+        width: 82em;
         max-width: none;
     }
 
@@ -164,10 +166,29 @@ html, body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        grid-column: 2/10;
+        grid-column: 2/11;
+        /* grid-column: top; */
         margin-top: 0.8em;
         background: rgb(255, 255, 255);
         z-index: 10;
+    }
+
+    .button-nav {
+        padding: 1em 0em 1em 0em;
+    }
+
+    .button-nav:first-child {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .button-nav:last-child {
+        margin-right: 0.5em;
+        padding: 0.5em;
+    }
+
+    .button-nav:hover {
+        transform: scale(1.1);
     }
 
     /* flexbox for announcements section  */
@@ -177,11 +198,21 @@ html, body {
        flex-grow: 1;
        align-items: center;
        border: 1px solid rgb(233, 233, 233);
-       padding: 1.5em 2.5em 1em 1em;
     }
 
     .top div:first-child {
+        flex: 1;
         color: rgb(254, 127, 19);
+        padding: 1.5em 2.5em 1.5em 1.5em;
+    }
+
+    .top div:nth-child(2) {
+        flex: 17;
+        padding: 1.5em 2.5em 1.5em 1.5em;
+    }
+
+    .top div:last-child {
+        flex: 1;
     }
 
     /* font and size for tasks and recommendations sections */
@@ -202,6 +233,7 @@ html, body {
         flex-direction: column;
         text-align: left;
         grid-column: 2/5;
+        /* grid-column: side; */
         background: rgb(255, 255, 255);
         border: 1px solid rgb(233, 233, 233);  
         z-index: 9;
@@ -222,9 +254,10 @@ html, body {
     }
 
     .tasks {
+        font-size: 1.2em;
         display: flex;
         flex-direction: row;
-        padding: 0.5em;
+        padding: 0.8em 1em 0.3em 0.7em;
         border-bottom: 1px solid rgb(233, 233, 233);
     }
 
@@ -268,6 +301,10 @@ html, body {
         justify-content: left;
     }
 
+    .recommendations:hover {
+        color: rgb(0, 0, 0);
+    }
+
     .small-title {
         font-size: 0.7em;
     }
@@ -277,7 +314,8 @@ html, body {
     .main {
         display: flex;
         flex-direction: column;
-        grid-column: 5/10;
+        grid-column: 5/11;
+        /* grid-column: main; */
         background: rgb(255, 255, 255);
         border: 1px solid rgb(233, 233, 233);
         z-index: 8;
@@ -290,7 +328,7 @@ html, body {
     /* flexbox box for whole analytics section to keep divs structured in columns */
     /* analytics to keep chart and graph side by side */
     .analytics-box {
-        width: 75%;
+        width: 76%;
         padding-right: 1em;
         margin-right: 1em;
         border-right: 1px solid rgb(233, 233, 233);
@@ -298,32 +336,47 @@ html, body {
     }
 
     /* social media checklist */
-    .checkbox {
+    .form-checkbox {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         padding: 2em;
     }
 
-    .checkbox span {
+    .checkbox {
+        display: flex;
+        flex-direction: row;
         padding-left: 1em;
+    } 
+
+    .checkbox input[type=checkbox] {
+        display:none;
     }
     
-    input[type=checkbox] {
-        display: none;
-        position: absolute;
+    .checkbox input[type=checkbox] + label {
+        width: 2em;
+        background: url(../img/Form_\ Checkbox.png) no-repeat center;
     }
 
-    input[type=checkbox] + label {
-        background: url(../img/Form_\ Checkbox.png) no-repeat;
-        background-size: cover;
-        display: inline-block;
+    .checkbox input[type=checkbox]:checked + label {
+        background: url(../img/Checkmarked.png) no-repeat center;
+    }
+         
+    /* input[type=checkbox] + label {
+        background: url(../img/Form_\ Checkbox.png);
+        height: 16px;
+        width: 16px;
+        display:inline-block;
+        padding: 0 0 0 0px;
     }
 
     input[type=checkbox]:checked + label {
-        background: url(../img/Checkmarked.png) no-repeat;
-        background-size: cover;
-        display: inline-block;
-    }
+        background: url(../img/Checkmarked.png);
+        height: 16px;
+        width: 16px;
+        display:inline-block;
+        padding: 0 0 0 0px;
+    } */
     
     /* activity section to keep activity heading and dropdown box in one row */
     .activity {
@@ -333,6 +386,7 @@ html, body {
 
     .activity span {
         color: rgb(153, 153, 153);
+        margin-left: 2.3em;
     }
 
     /* activity graph dropdown properties */
@@ -340,16 +394,28 @@ html, body {
         -webkit-appearance:none;
         outline: none;
     }
+
+    select:active, select:hover {
+        outline: none;
+        outline-color: transparent;
+      }
+
+    select option {
+        background: rgb(245, 245, 245);
+    }
+
+    select option:hover {
+        background-color: transparent;
+    }
     
     .dropdown {
         color: rgb(102, 102, 102);
         width: 14em;
-        height: 2.5em;
+        height: 3em;
         margin-left: auto;
         float: right;
         border: 1px solid rgb(233, 233, 233);
-        appearance: none;
-        background: url(../img/dropdown_arrow.png) no-repeat right;
+        /* background: url(../img/dropdown_arrow.png) no-repeat right; */
     }
 
     /*  charts section within analytics box */
@@ -358,6 +424,13 @@ html, body {
         flex-direction: column;
         color: rgb(153, 153, 153);
         padding: 0.5em;
+        margin-left: 1em;
+    }
+
+    .analytics-box img {
+        margin-left: 3em;
+        min-width: 90%;
+        width: 90%;
     }
 
     /* flexbox directions for the analytics flex divs */
@@ -371,6 +444,17 @@ html, body {
         flex-direction: row;
     }
 
+    .charts img {
+        margin-bottom: 1em;
+    }
+
+    .charts span {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    /* contacts and customers section */
+
     .flex-main {
         display: flex;
         flex-direction: row;
@@ -382,59 +466,274 @@ html, body {
     .people-box {
         display: flex;
         flex-direction: column;
-        position: relative;
-        text-align: center;
+        justify-content: space-around;
         width: 15em;
         height: 14em;
         box-shadow: 0px 0px 5px 0px rgba(217,217,217,1);
         border-radius: 0.2em;
     }
 
+    /* grayscale for people and social media */
+    .people-box:hover, .social-media:hover {
+        filter: grayscale(100);
+    }
+
     .avatar {
-        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -2.5em;
+        width: 6em;
     }
 
     .ribbon {
-        position: absolute;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: url(../img/blue_ribbon.png) no-repeat center;
+        padding: 1em 1em 1em 1em;
+        margin-top: -1em;
+        position: relative;
+        overflow: visible;
+    }
 
-        background: url(../img/blue_ribbon.png) no-repeat;
+    .box-charts {
+        height: 6em;
+        padding: 0.5em 0.6em 0.5em 0.6em;
     }
 
     /* did you know section */
     .did-you-know {
         display: flex;
         flex-direction: column;
-        background: rgb(36, 152, 244);
+        padding: 2em;
     }
 
     .dyk-layer {
-        background: url(../img/DYK_Navigation.png) no-repeat;
+        background: url(../img/DYK_Navigation.png) no-repeat center;
+        background-color: rgb(36, 152, 244);
+        background-size: contain;
+        border-radius: 0.3em;
+        padding: 1em;
+    }
+
+    .dyk-layer div {
+        color: rgb(255, 255, 255);
+        border-radius: 0.3em;
+        width: 70%;
+        padding: 1em 1em 1em 2em;
+    }
+
+    .dyk-layer div span:last-child {
+        font-size: 1.2em;
     }
 
     .banner {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        grid-column: 2/10;
+        grid-column: 2/11;
+        /* grid-column: banner; */
+        padding: 1em;
         background: rgb(36, 152, 244);
     }
 
     .banner-box {
-        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 28%;
         background: rgb(255, 255, 255);
         border-radius: 0.3em;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.6);
+    }
+
+    .word-box {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+        /* padding: 2.3em 1em 0.5em 1em; */
+    }
+
+    .banner-box:first-child {
+        text-align: right;
+    }
+
+    .banner-box:last-child {
+        text-align: left;
+    }
+
+    #green {
+        color: rgb(51, 204, 102);
+    }
+
+    .orange {
+        color: rgb(254, 127, 19);
+    }
+
+    .green-block {
+        position: absolute;
+        left: 3%;
+        top: 40%;
+        width: 80%;
+        text-align: center;
+        padding: 0.5em 1.5em 0.5em 1.5em;
+        background: rgb(51, 204, 102);
+        color: rgb(255, 255, 255);
+        border-radius: 0.2em;
+    }
+
+    .people {
+        width: auto;
+        height: auto;
+        margin-top: -0.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner-box:last-child img {
+        float: right;
     }
 
     /* gives space between banner and footer */
     .empty-row {
-        grid-column: 1/11;
+        grid-column: 1/12;
+        /* grid-column: empty; */
     }
 
     .footer {
         display: flex;
         flex-direction: row;
-        grid-column: 1/11;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/12;
+        /* grid-column: footer; */
         background: rgb(247, 247, 247);
+        box-shadow: 0px 0px 0px 0px rgba(217,217,217,1);
+    }
+
+    .bold {
+        font-weight: bolder;
+    }
+
+    .footer-text {
+        display: flex;
+        flex-direction: row;
+        color: rgb(153, 153, 153);
+    }
+
+    .footer-text span {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .footer-text span:first-child {
+        border-right: 1px solid rgb(221, 221, 221);
+    }
+
+    .footer-text span:nth-child(2) {
+        border-right: 1px solid rgb(221, 221, 221);
+    }
+
+    .footer-notif {
+        border-left: 1px solid rgb(221, 221, 221);
+        border-right: 1px solid rgb(221, 221, 221);
+    }
+
+    .footer-notif span {
+        margin-left: 1em;
+        margin-right: 4em;
+    }
+
+    .footer-notif img {
+        margin-right: 1em;
+    }
+      
+    .profile {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid rgb(221, 221, 221);
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .footer-media {
+        padding: 1em;
+        border-right: 1px solid rgb(221, 221, 221);
+    }
+
+    .underline:hover {
+        text-decoration: underline;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .site {
+            display: grid;
+            grid-template-columns: repeat(20%, 1fr);
+            /* blue-heading navbar dashboard announcements */
+            grid-template-rows: 40px 110px 110px 60px 800px 180px 60px 40px;
+            grid-template-areas: 
+            'hd'
+            'nv'
+            'dash'
+            'section'
+            'side'
+            'main'
+            'banner'
+            'footer'
+        }
+
+        .header {
+            grid-column: hd;
+        }
+
+        .heading-items {
+            flex-direction: row-reverse;
+        }
+
+        .heading-items div:first-child {
+
+        }
+
+        .heading-items div {
+
+        }
+
+        .nav-bar {
+            grid-column: nv;
+        }
+
+        .nav-icons {
+            
+        }
+
+        .dash {
+            grid-column: dash;
+        }
+
+        .top {
+            grid-column: section;
+        }
+
+        .side {
+            grid-column: side;
+        }
+
+        .main {
+            grid-column: main;
+        }
+
+        .banner {
+            grid-column: banner;
+        }
+
+        .footer {
+            grid-column: footer;
+        }
+
     }
 
 }
