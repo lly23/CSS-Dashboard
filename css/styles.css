@@ -10,7 +10,8 @@ html, body {
         display: grid;
         grid-template-columns: repeat(11, 1fr);
         /* blue-heading navbar dashboard announcements main banner empty footer */
-        grid-template-rows: 40px 110px 110px 70px 960px 200px 60px 60px;
+        grid-auto-flow:row;
+        grid-template-rows: 40px 120px 110px 70px 960px 200px 60px 60px;
         grid-template-areas: 
         'hd hd hd hd'
         'nv nv nv nv'
@@ -45,55 +46,43 @@ html, body {
         padding-right: 0.5em; 
     }
 
-    .heading-items div:hover {
+    .heading-hover:hover {
         transform: scale(1.1);
     }
 
     /* adding the line in between menu headings */
-    .heading-items div:first-child {
-        border-right: 1px solid rgb(28, 133, 216);
+    .heading-items span {
+        border-right: 2px solid rgb(28, 133, 216);
+        padding-right: 0.5em; 
     }
 
     .heading-items div:nth-child(2) {
-        border-right: 1px solid rgb(28, 133, 216);
+        border-right: 2px solid rgb(28, 133, 216);
     }
 
     /* navigation menu for icons */
     .nav-bar {
         position: relative;
-        padding-top: 0.5em;
         grid-column: 1/12;
         /* grid-column: nv; */
-        background: rgb(19, 70, 112);
+        background: url(../img/Menu_Background.png) bottom no-repeat;
+        background-size: cover;
     }
 
     .nav-icons {
         display: flex;
-        justify-content: center;
-        align-items: baseline;
-        width: 38%;
+        justify-content: space-between;
+        align-items: center;
+        width: 39%;
+        margin-top: 1.6em;
         margin-left: auto;
         margin-right: auto;
     }
 
     .marker {
-        width: 31%;
+        width: 39%;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .marker img {
-        width: 3em;
-    }
-
-    /* adds blue background with diagonal pattern and fade */
-    .nav-layer {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: url(../img/Menu_Background.png) center no-repeat;
     }
 
     /* dashboard section */
@@ -148,7 +137,7 @@ html, body {
     }
 
     /* announcements section */
-    .background-shade {
+    /* .background-shade {
         position: absolute;
         width: 100%;
         display: flex;
@@ -159,6 +148,14 @@ html, body {
     .background-shade img {
         width: 82em;
         max-width: none;
+    } */
+
+    #background-shade {
+        position: absolute;
+        width: 104%;
+        left: -2%;
+        top: -45%;
+        z-index: -10;
     }
 
     .top {
@@ -168,9 +165,12 @@ html, body {
         justify-content: space-between;
         grid-column: 2/11;
         /* grid-column: top; */
-        margin-top: 0.8em;
+        margin-top: 1.5em;
         background: rgb(255, 255, 255);
-        z-index: 10;
+    }
+
+    .top div:nth-child(2), .top div:nth-child(3), .top div:last-child {
+        z-index: 12;
     }
 
     .button-nav {
@@ -192,7 +192,7 @@ html, body {
     }
 
     /* flexbox for announcements section  */
-    .top div {
+    .top div:nth-child(2), .top div:nth-child(3), .top div:last-child {
        display: flex;
        flex-basis: auto;
        flex-grow: 1;
@@ -200,13 +200,13 @@ html, body {
        border: 1px solid rgb(233, 233, 233);
     }
 
-    .top div:first-child {
+    .top div:nth-child(2) {
         flex: 1;
         color: rgb(254, 127, 19);
         padding: 1.5em 2.5em 1.5em 1.5em;
     }
 
-    .top div:nth-child(2) {
+    .top div:nth-child(3) {
         flex: 17;
         padding: 1.5em 2.5em 1.5em 1.5em;
     }
@@ -236,7 +236,7 @@ html, body {
         /* grid-column: side; */
         background: rgb(255, 255, 255);
         border: 1px solid rgb(233, 233, 233);  
-        z-index: 9;
+        z-index: 13;
     }
 
     /* flexbox within task section to keep tasks in rows */
@@ -318,7 +318,7 @@ html, body {
         /* grid-column: main; */
         background: rgb(255, 255, 255);
         border: 1px solid rgb(233, 233, 233);
-        z-index: 8;
+        z-index: 14;
     }
 
     .main .blue-heading {
@@ -361,22 +361,6 @@ html, body {
     .checkbox input[type=checkbox]:checked + label {
         background: url(../img/Checkmarked.png) no-repeat center;
     }
-         
-    /* input[type=checkbox] + label {
-        background: url(../img/Form_\ Checkbox.png);
-        height: 16px;
-        width: 16px;
-        display:inline-block;
-        padding: 0 0 0 0px;
-    }
-
-    input[type=checkbox]:checked + label {
-        background: url(../img/Checkmarked.png);
-        height: 16px;
-        width: 16px;
-        display:inline-block;
-        padding: 0 0 0 0px;
-    } */
     
     /* activity section to keep activity heading and dropdown box in one row */
     .activity {
@@ -672,9 +656,11 @@ html, body {
     @media only screen and (max-width: 600px) {
         .site {
             display: grid;
-            grid-template-columns: repeat(20%, 1fr);
-            /* blue-heading navbar dashboard announcements */
-            grid-template-rows: 40px 110px 110px 60px 800px 180px 60px 40px;
+            grid-template-columns: 100%;
+            grid-column-gap: 1em;
+            /* grid-auto-flow: row; */
+            /* blue-heading navbar dashboard announcements side main banner footer */
+            grid-template-rows: 40px 110px 110px 25% auto auto 60px auto 20px;
             grid-template-areas: 
             'hd'
             'nv'
@@ -691,15 +677,18 @@ html, body {
         }
 
         .heading-items {
-            flex-direction: row-reverse;
+            margin-right: 0;
         }
 
-        .heading-items div:first-child {
-
+        .heading-items div:last-child {
+            padding-right: 0em;
         }
 
-        .heading-items div {
-
+        .marker {
+            width: 100%;
+            position: absolute;
+            margin: 0;
+            bottom: 0;
         }
 
         .nav-bar {
@@ -707,7 +696,7 @@ html, body {
         }
 
         .nav-icons {
-            
+            width: 100%;
         }
 
         .dash {
@@ -715,10 +704,25 @@ html, body {
         }
 
         .top {
+            flex-direction: column;
             grid-column: section;
         }
 
-        .side {
+        .top div {
+            border: none;
+        }
+
+        .top div:nth-child(2) {
+            flex: 2;
+        }
+
+        .top div:last-child {
+            flex: 4;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .side-bar {
             grid-column: side;
         }
 

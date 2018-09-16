@@ -3,7 +3,7 @@
 .customers, .customers-blue, .dashboard, .dashboard-blue, .messages, 
 .messages-blue, .promotions, .promotions-blue, .page-creator, .page-creator-blue, 
 .analytics, .analytics-blue
-{ display: inline-block; background: url('../img/spritesheet.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; margin: 1em 1.3em 1.3em 1em;}
+{ display: inline-block; background: url('../img/spritesheet.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left;}
  
 .customers { background-position: -1px -0px; width: 62px; height: 42px; }
 .customers-blue { background-position: -1px -43px; width: 62px; height: 42px; }
