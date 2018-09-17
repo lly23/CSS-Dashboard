@@ -82,8 +82,10 @@ html, body {
 
     .marker {
         width: 39%;
-        margin-left: auto;
-        margin-right: auto;
+        position: absolute;
+        bottom: -0.4em;
+        left: 31%;
+    }
     }
 
     /* dashboard section */
@@ -508,7 +510,7 @@ html, body {
     }
 
     /* grayscale for people and social media */
-    .people-box:hover, .social-media:hover {
+    .people-box:hover, .media:hover {
         filter: grayscale(100);
     }
 
