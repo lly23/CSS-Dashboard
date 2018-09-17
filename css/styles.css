@@ -10,9 +10,9 @@ html, body {
         display: grid;
         grid-template-columns: repeat(11, 1fr);
         /* blue-heading navbar dashboard announcements main banner empty footer */
-        grid-auto-flow:row;
+        grid-auto-flow: row;
         /* grid-template-rows: 40px 120px 110px 70px 1080px 200px 60px 60px; */
-        grid-template-rows: 5% 15% 15% 10% auto 28% 10% 5%;
+        grid-template-rows: 5% 15% 15% 10% auto 29% 10% 5%;
         grid-template-areas: 
         'hd hd hd hd'
         'nv nv nv nv'
@@ -563,79 +563,84 @@ html, body {
         padding: 1em 1em 1em 2em;
     }
 
-    .dyk-layer div span:last-child {
-        font-size: 1.2em;
+    .banner {
+        grid-column: 2/11;
+        background: rgb(36, 152, 244);
     }
 
-    .banner {
+    #three-ads {
+        width: 85%;
+        padding-top: 0.5em;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        grid-column: 2/11;
-        /* grid-column: banner; */
-        padding: 1em;
-        background: rgb(36, 152, 244);
+        justify-content: center;
+        margin: auto;
     }
 
     .banner-box {
         position: relative;
         display: flex;
         flex-direction: row;
-        width: 28%;
+        width: 100%;
+        margin: 1em;
         background: rgb(255, 255, 255);
         border-radius: 0.3em;
         box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.6);
     }
 
     .word-box {
-        background: white;
-        width: 100%;
-        position: relative;
         display: flex;
         flex-direction: column;
         font-size: 1.5em;
-        /* padding: 2.3em 1em 0.5em 1em; */
-    }
-
-    .banner-box:first-child {
-        text-align: right;
-    }
-
-    .banner-box:last-child {
-        text-align: left;
+        position: absolute;
+        width: 95%;
+        top: 30%;
+        border-radius: 0.2em;
     }
 
     #green {
         color: rgb(51, 204, 102);
+        text-align: right;
     }
 
-    .orange {
-        color: rgb(254, 127, 19);
+    #message {
+        text-align: right;
     }
 
-    .green-block {
+    #orange-img {
+        right: 0;
         position: absolute;
-        left: 3%;
+        height: 100%;
+    }
+
+    #orange {
+        color: rgb(254, 127, 19);
+        text-align: left;
+        padding-left: 5%;
+    }
+
+    .green-block { 
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
         top: 40%;
         width: 80%;
-        text-align: center;
-        padding: 0.5em 1.5em 0.5em 1.5em;
+        padding: 0.5em 1em 0.5em 1em;
         background: rgb(51, 204, 102);
         color: rgb(255, 255, 255);
         border-radius: 0.2em;
     }
 
-    .people {
+    #people {
         width: auto;
         height: auto;
         margin-top: -0.5em;
-        margin-bottom: 0.5em;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .banner-box:last-child img {
-        float: right;
+        overflow-x: hidden;
     }
 
     /* gives space between banner and footer */
@@ -733,8 +738,7 @@ html, body {
             display: grid;
             grid-template-columns: 100%;
             grid-column-gap: 1em;
-            /* grid-auto-flow: row; */
-            /* blue-heading navbar dashboard announcements main banner footer */
+            /* blue-heading navbar dashboard announcements side main banner footer */
             grid-template-rows: 5% 15% 15% 30% auto auto auto 5%;
             grid-template-areas: 
             'hd'
@@ -890,24 +894,45 @@ html, body {
         .banner {
             grid-column: banner;
             flex-direction: column;
-            margin: 0em 1em 0em 1em;
+            margin: 0em 1em 1em 1em;
+        }
+
+        #three-ads {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            padding-top: 1em;
+            padding-bottom: 1em;
         }
 
         .banner-box {
-            width: 70%;
+            width: 80%;
             height: 9em;
             margin-left: auto;
             margin-right: auto;
             margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+        #green {
+            font-size: 0.75em;
         }
 
-        #green-message {
-            background: url(../img/green_message_image.png) no-repeat left;
-            z-index: 10;
+        #orange {
+            font-size: 0.75em;
         }
 
-        .banner-box:first-child {
-            margin-top: 0;
+        #message {
+            font-size: 0.5em;
+        }
+
+        .people {
+            margin-bottom: 0;
+        }
+
+        .green-block {
+            font-size: 0.8em;
         }
 
         .empty-row {
