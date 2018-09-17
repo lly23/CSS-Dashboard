@@ -678,30 +678,41 @@ html, body {
         border-right: 1px solid rgb(221, 221, 221);
     }
 
-    .footer-notif {
-        border-left: 1px solid rgb(221, 221, 221);
-        border-right: 1px solid rgb(221, 221, 221);
-    }
-
     .footer-notif span {
         margin-left: 1em;
-        margin-right: 4em;
+        margin-right: 6em;
     }
 
     .footer-notif img {
         margin-right: 1em;
     }
-      
-    .profile {
+
+    .footer-notif, .profile, .footer-media {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        border-right: 1px solid rgb(221, 221, 221);
-        padding-left: 1em;
-        padding-right: 1em;
+        height: 100%;
     }
 
-    .footer-media {
-        padding: 1em;
+    .footer-notif div:first-child {
+        border-left: 1px solid rgb(221, 221, 221);
+    }
+
+    .profile div, .footer-media div {
+        padding: 0.5em 0.2em 0em 0.2em;
+    }
+
+    .profile div:first-child, .footer-media div:first-child {
+        padding-left: 0.5em;
+        border-left: 1px solid rgb(221, 221, 221);
+    }
+
+    .profile div:last-child {
+        padding-right: 0.5em;
+    }
+
+    .footer-media div:last-child {
+        padding-right: 0.5em;
         border-right: 1px solid rgb(221, 221, 221);
     }
 
