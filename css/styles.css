@@ -91,7 +91,7 @@ a {
         margin-right: auto;
     }
 
-    /* white tick mark and shadows div */
+    /* shadows div */
     .marker {
         width: 45%;
         height: 8%;
@@ -776,7 +776,7 @@ a {
             padding-right: 0em;
         }
 
-        /* shadows and white tick mark */
+        /* shadows */
         .marker {
             width: 100%;
             height: 15%;
