@@ -8,8 +8,8 @@ a {
     text-decoration: none;
 }
 
-.heading-items a:visited {
-    color: white;
+.heading-items a:hover {
+    text-decoration: none;
 }
 
 /* supports checks whether the user browswer supports this */
@@ -20,7 +20,7 @@ a {
         /* blue-heading navbar dashboard announcements main banner empty footer */
         grid-auto-flow: row;
         /* grid-template-rows: 40px 120px 110px 70px 1080px 200px 60px 60px; */
-        grid-template-rows: 5% 15% 15% 10% auto 29% 10% 5%;
+        grid-template-rows: 40px 120px 110px 10% auto 29% 10% 5%;
         grid-template-areas: 
         'hd hd hd hd'
         'nv nv nv nv'
@@ -32,7 +32,7 @@ a {
         'footer footer footer footer'
     }
 
-    /* very top header */
+    /* very top blue header */
     .header {
         grid-column: 1/12;
         /* grid-column: hd; */
@@ -45,7 +45,6 @@ a {
         display: flex;
         flex-direction: row;
         float: right;
-        /* justify-content: right; */
         padding: 0.6em;
         margin-right: 5%;
     }
@@ -57,6 +56,10 @@ a {
 
     .heading-hover:hover {
         transform: scale(1.1);
+    }
+
+    .heading-hover a:visited {
+        color: white;
     }
 
     /* adding the line in between menu headings */
@@ -88,6 +91,7 @@ a {
         margin-right: auto;
     }
 
+    /* white tick mark and shadows div */
     .marker {
         width: 45%;
         height: 8%;
@@ -96,6 +100,7 @@ a {
         margin-right: auto;
     }
 
+    /* positioning shadows right underneath icons */
     #shadows {
         width: 90%;
         left: 7%;
@@ -103,8 +108,10 @@ a {
         position: absolute;
     }
 
+    /* white tick mark */
     #white-marker {
         position: absolute;
+        bottom: 0;
         left: 8%;
     }
 
@@ -159,28 +166,16 @@ a {
         outline: none;
     }
 
-    /* announcements section */
-    /* .background-shade {
-        position: absolute;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        top: 16.2em;
-    }
-
-    .background-shade img {
-        width: 82em;
-        max-width: none;
-    } */
-
+    /* background gradient that borders beginning of main content */
     #background-shade {
         position: absolute;
-        width: 104%;
-        left: -2%;
-        top: -45%;
+        width: 102%;
+        left: -1em;
+        top: -1.2em;
         z-index: -10;
     }
 
+    /* announcements section (top) */
     .top {
         position: relative;
         display: flex;
@@ -192,10 +187,12 @@ a {
         background: rgb(255, 255, 255);
     }
 
+    /* announcements section is on top of background border */
     .top div:nth-child(2), .top div:nth-child(3), .top div:last-child {
         z-index: 12;
     }
 
+    /* announcements buttons */
     .button-nav {
         padding: 1em 0em 1em 0em;
     }
@@ -253,8 +250,11 @@ a {
         padding: 0.5em 0.5em 0.2em 0.5em;
     }
 
+    .small-title {
+        font-size: 0.7em;
+    }
+
     /* side bar holds tasks and recommendations */
-    /* flexbox for tasks and recommendations */
     .side-bar {
         display: flex;
         flex-direction: column;
@@ -266,6 +266,7 @@ a {
         z-index: 13;
     }
 
+    /* flexbox for tasks */
     /* flexbox within task section to keep tasks in rows */
     .flex-task {
         display: flex;
@@ -273,6 +274,7 @@ a {
         font-size: 1.2em;
     }
 
+    /* task settings icon properties */
     .task-heading img {
         margin-left: auto;
         float: right;
@@ -297,7 +299,7 @@ a {
         float: right;
     }
 
-    /* color to grayscale when hovering over tasks and recommendations */
+    /* color to grayscale when hovering over tasks and recommendations text */
     .tasks:hover, .recommendations:hover {
         filter: grayscale(90);
         color: rgb(204, 204, 204);
@@ -307,7 +309,6 @@ a {
     .flex-recommendation {
         display: flex;
         flex-direction: column;
-        /* padding: 1em 0em 1em 1em; */
     }   
     
     .recommendations {
@@ -332,12 +333,8 @@ a {
         color: rgb(0, 0, 0);
     }
 
-    .small-title {
-        font-size: 0.7em;
-    }
-
     /* main holds analytics, contacts, and did you know column */
-    /* flexbox for sections within main */
+    /* flexbox for sections within main, keeps sections stacked on top of each other */
     .main {
         display: flex;
         flex-direction: column;
@@ -353,7 +350,7 @@ a {
     }
 
     /* flexbox box for whole analytics section to keep divs structured in columns */
-    /* analytics to keep chart and graph side by side */
+    /* analytics to keep activity heading and graph in one column */
     .analytics-box {
         width: 76%;
         padding-right: 1em;
@@ -362,35 +359,7 @@ a {
         box-shadow: 3px 0px 0px 0px rgba(238,238,238,1);
     }
 
-    /* social media checklist */
-    .form-checkbox {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 3em;
-        padding: 2em;
-    }
-
-    .checkbox {
-        display: flex;
-        flex-direction: row;
-        padding-left: 1em;
-    } 
-
-    .checkbox input[type=checkbox] {
-        display:none;
-    }
-    
-    .checkbox input[type=checkbox] + label {
-        width: 2em;
-        background: url(../img/Form_\ Checkbox.png) no-repeat center;
-    }
-
-    .checkbox input[type=checkbox]:checked + label {
-        background: url(../img/Checkmarked.png) no-repeat center;
-    }
-    
-    /* activity section to keep activity heading and dropdown box in one row */
+    /* activity heading properites */
     .activity {
         padding: 1em 0.5em 3em 1em;
         float: right;
@@ -456,19 +425,61 @@ a {
         margin-left: 1em;
     }
 
+    /* charts image properties */
+    .charts img {
+        margin-bottom: 1em;
+    }
+
+    .charts span {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    /* keeps graph image and charts in one row */
     .flex-charts {
         margin-left: auto;
         margin-right: auto;
         width: 98%;
     }
 
+    /* analytics chart image */
     .analytics-chart {
         margin-left: 3em;
         min-width: 90%;
         width: 90%;
     }
 
-    /* flexbox directions for the analytics flex divs */
+    /* social media checklist */
+    .form-checkbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3em;
+        padding: 2em;
+    }
+
+    .checkbox {
+        display: flex;
+        flex-direction: row;
+        padding-left: 1em;
+    } 
+
+    .checkbox input[type=checkbox] {
+        display:none;
+    }
+    
+    /* empty checkbox */
+    .checkbox input[type=checkbox] + label {
+        width: 2em;
+        background: url(../img/Form_\ Checkbox.png) no-repeat center;
+    }
+
+    /* checkmarked box */
+    .checkbox input[type=checkbox]:checked + label {
+        background: url(../img/Checkmarked.png) no-repeat center;
+    }
+    
+    /* flexbox directions for the analytics divs */
     .analytics-box, .charts {
         display: flex; 
         flex-direction: column;
@@ -479,17 +490,7 @@ a {
         flex-direction: row;
     }
 
-    .charts img {
-        margin-bottom: 1em;
-    }
-
-    .charts span {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-    }
-
     /* contacts and customers section */
-
     .flex-main {
         display: flex;
         flex-direction: row;
@@ -508,7 +509,7 @@ a {
         border-radius: 0.2em;
     }
 
-    /* grayscale for people and social media */
+    /* grayscale for people boxes and people box image properties */
     .people-box:hover {
         filter: grayscale(100);
     }
@@ -535,6 +536,7 @@ a {
         overflow: visible;
     }
 
+    /* charts within customers and contacts divs */
     .box-charts {
         height: 6em;
         padding: 0.5em 0.6em 0.5em 0.6em;
@@ -546,15 +548,12 @@ a {
     }
 
     .dyk-layer {
+        color: rgb(255, 255, 255);
         display: flex;
         flex-direction: row;
         align-items: center;
         background-color: rgb(36, 152, 244);
         border-radius: 0.3em;
-    }
-
-    .dyk-layer div {
-        color: rgb(255, 255, 255);
     }
 
     .dyk-text {
@@ -574,11 +573,13 @@ a {
         text-align: right;
     }
 
+    /* banner with three ads */
     .banner {
         grid-column: 2/11;
         background: rgb(36, 152, 244);
     }
 
+    /* div encasing all three divs */
     #three-ads {
         width: 85%;
         padding-top: 0.5em;
@@ -588,6 +589,7 @@ a {
         margin: auto;
     }
 
+    /* each of the ad divs */
     .banner-box {
         position: relative;
         display: flex;
@@ -602,7 +604,7 @@ a {
     .word-box {
         display: flex;
         flex-direction: column;
-        font-size: 1.5em;
+        font-size: 1.3em;
         position: absolute;
         width: 95%;
         top: 30%;
@@ -660,6 +662,7 @@ a {
         /* grid-column: empty; */
     }
 
+    /* footer section */
     .footer {
         display: flex;
         flex-direction: row;
@@ -684,13 +687,6 @@ a {
     .footer-text span {
         padding-left: 1em;
         padding-right: 1em;
-    }
-
-    .footer-text span:first-child {
-        border-right: 1px solid rgb(221, 221, 221);
-    }
-
-    .footer-text span:nth-child(2) {
         border-right: 1px solid rgb(221, 221, 221);
     }
 
@@ -699,6 +695,7 @@ a {
         margin-right: 6em;
     }
 
+    /* notifications section inside footer */
     .footer-notif img {
         margin-right: 1em;
     }
@@ -711,6 +708,7 @@ a {
         border-left: 1px solid rgb(221, 221, 221);
     }
 
+    /* profile section inside footer */
     .profile {
         margin-left: 0.2em;
         margin-right: 0.2em;
@@ -721,10 +719,6 @@ a {
         width: 2em;
     }
 
-    .footer-media {
-        height: 100%;
-    }
-
     .profile div:first-child {
         padding-left: 0.5em;
     }
@@ -733,19 +727,18 @@ a {
         padding-right: 0.5em;
     }
 
+    /* social media section inside footer */
     .footer-media {
         display: flex;
         flex-direction: row;
         align-items: center;
+        height: 100%;
         border-right: 1px solid rgb(221, 221, 221);
     }
 
+    /* more and notifications section that will appear in mobile */
     .footer-more , .footer-notifications {
         display: none;
-    }
-
-    .underline:hover {
-        text-decoration: underline;
     }
 
     @media only screen and (max-width: 600px) {
@@ -770,6 +763,7 @@ a {
             'footer'
         }
 
+        /* blue-heading at the top */
         .header {
             grid-column: hd;
         }
@@ -782,6 +776,7 @@ a {
             padding-right: 0em;
         }
 
+        /* shadows and white tick mark */
         .marker {
             width: 100%;
             height: 15%;
@@ -802,30 +797,37 @@ a {
             padding-left: 0.5em;
         }
 
+        /* navigation bar with icons */
+        /* give a little bit of padding to whole nav bar */
         .nav-bar {
             grid-column: nv;
             padding: 1.5em 1em 1em 1em;
         }
 
+        /* make nav icons span whole width of mobile */
         .nav-icons {
             width: 100%;
             margin-top: 0;
         }
 
+        /* dashboard  */
         .dash {
             grid-column: dash;
             margin: 1em;
         }
 
+        /* search bar */
         .search-bar {
             width: 45%;
         }
 
+        /* background-gradient shifts  */
         #background-shade {
             top: -8%;
             width: 105%;
         }
 
+        /* announcements section (top) */
         .top {
             flex-direction: column;
             grid-column: section;
@@ -844,20 +846,39 @@ a {
             padding-bottom: 1.5em;
         }
 
+        /* no borders on the announcements section */
         .top div:nth-child(2), .top div:nth-child(3), .top div:last-child {
             border: none;
         }
 
+        /* side bar includes tasks and recommendations */
         .side-bar {
             grid-column: side;
             margin: 0em 1em 0em 1em;
         }
 
+        /* main includes analytics and did you know */
         .main {
             grid-column: main;
             margin: 0em 1em 0em 1em;
         }
 
+        /* make main contents stack on top of each other */
+        .flex-main {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20%;
+        }
+
+        .flex-main div:last-child {
+            margin-top: 2em;
+        }
+
+        .people-box:first-child {
+            margin-bottom: 20%;
+        }
+
+        /* make analytics stack on top of each other */
         .flex-charts {
             flex-direction: column;
         }
@@ -884,6 +905,20 @@ a {
             min-width: 92%;
         }
 
+        /* analytics charts  */
+        .charts {
+            flex-direction: row;
+            margin-top: 2em;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
+
+        .charts span, .charts img {
+            margin-left: 0.5em;
+        }
+
+        /* social media checkbox list */
         .form-checkbox {
             width: 90%;
             margin-left: auto;
@@ -905,36 +940,11 @@ a {
             width: 75%;
         }
 
-        .flex-main {
-            flex-direction: column;
-            align-items: center;
-            padding-top: 20%;
-        }
-
-        .flex-main div:last-child {
-            margin-top: 2em;
-        }
-
-        .people-box:first-child {
-            margin-bottom: 20%;
-        }
-
-        .charts {
-            flex-direction: row;
-            margin-top: 2em;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0;
-        }
-
-        .charts span, .charts img {
-            margin-left: 0.5em;
-        }
-
         .main .blue-heading {
             padding: 0.5em;
         }
 
+        /* did you know section */
         .did-you-know {
             padding: 1em;
         }
@@ -947,12 +957,14 @@ a {
             margin: 2em;
         }
 
+        /* banner with three ads */
         .banner {
             grid-column: banner;
             flex-direction: column;
             margin: 0em 1em 1em 1em;
         }
 
+        /* make the three ads stack on top of each other */
         #three-ads {
             display: flex;
             flex-direction: column;
@@ -962,6 +974,7 @@ a {
             padding-bottom: 1em;
         }
 
+        /* each ad within banner will align to middle */
         .banner-box {
             width: 80%;
             height: 9em;
@@ -991,6 +1004,7 @@ a {
             font-size: 0.8em;
         }
 
+        /* no more empty row */
         .empty-row {
             display: none;
         }
@@ -999,10 +1013,12 @@ a {
             grid-column: footer;
         }
 
+        /* footer tutorials, blogs, and support will get replaced with more and notifications */
         .footer-text, .footer-notif {
             display: none;
         }
 
+        /* make more and notifications appear */
         .footer-more, .footer-notifications {
             display: flex;
             flex-direction: row;
