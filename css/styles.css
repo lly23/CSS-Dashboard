@@ -112,7 +112,7 @@ a {
     #white-marker {
         position: absolute;
         bottom: 0;
-        left: 8%;
+        left: 31%;
     }
 
     /* dashboard section */
@@ -791,10 +791,8 @@ a {
 
         #white-marker {
             position: absolute;
-            margin: 0;
-            left: 0;
             bottom: 0;
-            padding-left: 0.5em;
+            left: 6.5%;
         }
 
         /* navigation bar with icons */
