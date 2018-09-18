@@ -75,13 +75,14 @@ html, body {
         justify-content: space-between;
         align-items: center;
         width: 39%;
-        margin-top: 1.6em;
+        margin-top: 2.5em;
         margin-left: auto;
         margin-right: auto;
     }
 
     .marker {
         width: 45%;
+        height: 8%;
         position: relative;
         margin-left: auto;
         margin-right: auto;
@@ -90,7 +91,7 @@ html, body {
     #shadows {
         width: 90%;
         left: 7%;
-        bottom: -0.6em;
+        bottom: -0.2em;
         position: absolute;
     }
 
@@ -788,8 +789,8 @@ html, body {
 
         .marker {
             width: 100%;
+            height: 15%;
             left: 0;
-            bottom: 0;
         }
 
         #shadows {
