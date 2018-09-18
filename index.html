@@ -149,15 +149,20 @@
             <!-- Analytics Chart and Activity -->
             <div class="analytics-box">
                 <div class="activity"> 
-                    <span>ACTIVITY</span>
-                    <select class="dropdown">
-                        <option value="placeholder date">06/28/11 - 07/21/11 <img src="img/dropdown_arrow.png" alt="dropdown arrow"></option>
-                        <option value="first date">07/21/11 - 08/14/11</option>
-                        <option value="second date">08/14/11 - 09/07/11</option>
-                        <option value="third date">09/07/11 - end of time</option>
-                    </select>
+                    <span class="activity-word">ACTIVITY</span>
+                    <div class="dropdown">
+                        <button class="placeholder">
+                            06/28/11 - 07/21/11
+                            <img class="drop-arrow" src="img/dropdown_arrow.png" alt="orange dropdown arrow">
+                        </button>
+                        <div class="dropdown-options">
+                            <span></span><a href="#">07/21/11 - 08/14/11</a></span>
+                            <span><a href="#">08/14/11 - 09/07/11</a></span>
+                            <span><a href="#">09/07/11 - end of time</a></span>
+                        </div>
+                    </div>
                 </div>
-                <img src="img/Activity.png" alt="Activity Graph">
+                <img class="analytics-chart" src="img/Activity.png" alt="Activity Graph">
             </div>
             <!-- Channels and Referrals Section -->
             <div class="charts">
@@ -167,28 +172,30 @@
                 <img src="img/Referrals.png" alt="Referrals Pie Graph"> 
             </div>
         </div>
-            <div class="form-checkbox">
-                <div class="checkbox">
-                    <input type="checkbox" name="facebook" value="facebook" id="facebook"/>
-                    <label for="facebook"></label>
-                    <img src="img/Facebook.png" alt="Facebook">
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="twitter" value="twitter" id="twitter"/>
-                    <label for="twitter"></label>
-                    <img src="img/Twitter.png" alt="Twitter">
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="fourspace" value="fourspace" id="fourspace"/>
-                    <label for="fourspace"></label>
-                    <img src="img/Foursquare.png" alt="Foursquare">
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="google" value="google" id="google"/>
-                    <label for="google"></label>
-                    <img src="img/Google.png" alt="Google Plus">
-                </div> 
+
+        <!-- Checklist Boxes -->
+        <div class="form-checkbox">
+            <div class="checkbox">
+                <input type="checkbox" name="facebook" value="facebook" id="facebook"/>
+                <label for="facebook"></label>
+                <img src="img/Facebook.png" alt="Facebook">
             </div>
+            <div class="checkbox">
+                <input type="checkbox" name="twitter" value="twitter" id="twitter"/>
+                <label for="twitter"></label>
+                <img src="img/Twitter.png" alt="Twitter">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="fourspace" value="fourspace" id="fourspace"/>
+                <label for="fourspace"></label>
+                <img src="img/Foursquare.png" alt="Foursquare">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="google" value="google" id="google"/>
+                <label for="google"></label>
+                <img src="img/Google.png" alt="Google Plus">
+            </div> 
+        </div>
  
         <!-- Contacts and Influencers -->
         <div class="flex-main">
