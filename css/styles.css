@@ -299,7 +299,7 @@ a {
 
     /* color to grayscale when hovering over tasks and recommendations */
     .tasks:hover, .recommendations:hover {
-        filter: grayscale(100);
+        filter: grayscale(90);
         color: rgb(204, 204, 204);
     }
 
@@ -318,7 +318,7 @@ a {
         color: rgb(119, 119, 119);
     }
 
-    .recommendations img {
+    .recommendations div {
         margin-right: 1em;
     }
 
@@ -530,7 +530,7 @@ a {
     }
 
     /* grayscale for people and social media */
-    .people-box:hover, .media:hover {
+    .people-box:hover {
         filter: grayscale(100);
     }
 
@@ -724,7 +724,7 @@ a {
         margin-right: 1em;
     }
 
-    .footer-notif, .profile, .footer-media {
+    .footer-notif, .profile {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -732,7 +732,21 @@ a {
         border-left: 1px solid rgb(221, 221, 221);
     }
 
-    .profile div:first-child, .footer-media div:first-child {
+    .profile {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+        border-right: 1px solid rgb(221, 221, 221);
+    }
+
+    .profile img {
+        width: 2em;
+    }
+
+    .footer-media {
+        height: 100%;
+    }
+
+    .profile div:first-child {
         padding-left: 0.5em;
     }
 
@@ -741,15 +755,10 @@ a {
     }
 
     .footer-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         border-right: 1px solid rgb(221, 221, 221);
-    }
-
-    .footer-media div {
-        padding: 0.1em;
-    }
-
-    .footer-media div:last-child {
-        padding-right: 0.5em;
     }
 
     .footer-more , .footer-notifications {

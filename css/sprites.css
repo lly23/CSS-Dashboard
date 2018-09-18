@@ -23,3 +23,68 @@
 .analytics { background-position: -1px -506px; width: 42px; height: 50px; }
 .analytics-blue { background-position: -1px -557px; width: 42px; height: 50px; }
 .analytics:hover { background-position: -1px -557px; width: 42px; height: 50px; }
+
+.count-1-gray, .count-2-gray, .count-3-gray, .count-4-gray, .count1, 
+.count2, .count3, .count4, .circle-1-gray, .circle-1, 
+.circle-2-gray, .circle-2, .circle-3-gray, .circle-3, .circle-4-gray, 
+.circle-4
+{ display: inline-block; background: url('../img/spritesheet2.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.count-1-gray { background-position: -0px -0px; width: 60px; height: 30px; }
+.count-2-gray { background-position: -0px -30px; width: 60px; height: 30px; }
+.count-3-gray { background-position: -0px -60px; width: 60px; height: 30px; }
+.count-4-gray { background-position: -0px -90px; width: 60px; height: 30px; }
+.count1 { background-position: -0px -120px; width: 60px; height: 30px; }
+.count1:hover { background-position: -0px -0px; width: 60px; height: 30px; }
+.count2 { background-position: -0px -150px; width: 60px; height: 30px; }
+.count2:hover { background-position: -0px -30px; width: 60px; height: 30px; }
+.count3 { background-position: -0px -180px; width: 60px; height: 30px; }
+.count3:hover { background-position: -0px -60px; width: 60px; height: 30px; }
+.count4 { background-position: -0px -210px; width: 60px; height: 30px; }
+.count4:hover { background-position: -0px -90px; width: 60px; height: 30px; }
+.circle-1-gray { background-position: -0px -240px; width: 24px; height: 24px; }
+.circle-1 { background-position: -24px -240px; width: 24px; height: 24px; }
+.circle-1:hover { background-position: -0px -240px; width: 24px; height: 24px; }
+.circle-2-gray { background-position: -0px -264px; width: 24px; height: 24px; }
+.circle-2 { background-position: -24px -264px; width: 24px; height: 24px; }
+.circle-2:hover { background-position: -0px -264px; width: 24px; height: 24px;  }
+.circle-3-gray { background-position: -0px -288px; width: 24px; height: 24px; }
+.circle-3 { background-position: -24px -288px; width: 24px; height: 24px; }
+.circle-3:hover { background-position: -0px -288px; width: 24px; height: 24px; }
+.circle-4-gray { background-position: -0px -312px; width: 24px; height: 24px; }
+.circle-4 { background-position: -24px -312px; width: 24px; height: 24px; }
+.circle-4:hover { background-position: -0px -312px; width: 24px; height: 24px; }
+
+.checklist-icon-gray, .checklist-icon, .article-icon-gray, .article-icon, .lightbulb-icon-gray, 
+.lightbulb-icon
+{ display: inline-block; background: url('../img/spritesheet3.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.checklist-icon-gray { background-position: -0px -0px; width: 22px; height: 20px; }
+.checklist-icon { background-position: -0px -20px; width: 22px; height: 32px; }
+.checklist-icon:hover { background-position: -0px -0px; width: 22px; height: 20px; }
+.article-icon-gray { background-position: -0px -52px; width: 19px; height: 23px; }
+.article-icon { background-position: -0px -75px; width: 19px; height: 35px; }
+.article-icon:hover { background-position: -0px -52px; width: 19px; height: 23px; }
+.lightbulb-icon-gray { background-position: -0px -110px; width: 14px; height: 23px; }
+.lightbulb-icon { background-position: -0px -133px; width: 14px; height: 35px; }
+.lightbulb-icon:hover { background-position: -0px -110px; width: 14px; height: 23px; }
+
+.media-1-gray, .media-2-gray, .media-3-gray, .media-4-gray, .media1, 
+.media2, .media3, .media4
+{ display: inline-block; background: url('../img/spritesheet4.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; margin: 0.2em;}
+ 
+.media1 { margin-left: 0.5em; }
+.media4 { margin-right: 0.5em; }
+
+.media-1-gray { background-position: -0px -0px; width: 16px; height: 16px; }
+.media-2-gray { background-position: -16px -0px; width: 16px; height: 16px; }
+.media-3-gray { background-position: -0px -16px; width: 16px; height: 16px; }
+.media-4-gray { background-position: -16px -16px; width: 16px; height: 16px; }
+.media1 { background-position: -0px -32px; width: 16px; height: 16px; }
+.media1:hover { background-position: -0px -0px; width: 16px; height: 16px; }
+.media2 { background-position: -16px -32px; width: 16px; height: 16px; }
+.media2:hover { background-position: -16px -0px; width: 16px; height: 16px; }
+.media3 { background-position: -0px -48px; width: 16px; height: 16px; }
+.media3:hover { background-position: -0px -16px; width: 16px; height: 16px; }
+.media4 { background-position: -16px -48px; width: 16px; height: 16px; }
+.media4:hover { background-position: -16px -16px; width: 16px; height: 16px; }
