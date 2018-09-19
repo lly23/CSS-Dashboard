@@ -13,7 +13,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.heading-items a:hover, .flex-task a:hover, .flex-recommendation a:hover {
+.heading-items a:hover, .flex-task a:hover, .flex-recommendation a:hover, .dropdown-options a:hover {
     cursor: pointer;
     text-decoration: none;
 }
