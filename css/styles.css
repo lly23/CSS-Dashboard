@@ -175,7 +175,7 @@ a:hover {
     /* background gradient that borders beginning of main content */
     #background-shade {
         position: absolute;
-        width: 76.5em;
+        width: 73em;
         left: -1.5em;
         top: -1.2em;
         z-index: -10;
